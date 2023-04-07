@@ -22,8 +22,8 @@ type WeatherData struct {
 
 func main() {
 	randGen := rand.New(rand.NewSource(time.Now().UnixNano()))
-	timer := time.NewTimer(20 * time.Second)
-	ticker := time.NewTicker(5 * time.Second)
+	timer := time.NewTimer(2 * time.Minute)
+	ticker := time.NewTicker(15 * time.Second)
 	for {
 		select {
 		case <-ticker.C:
